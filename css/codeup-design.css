@@ -1,49 +1,256 @@
 
 body {
     background-color: rgb(240 240 240);
+    margin: 1em;
+
 }
 
 .jumbotron {
-    padding: 4rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 4em;
-    margin: 8em 0 3em 0;
-    }
+    margin: 2em 0 3em 0;
+    font-family: 'Anton', sans-seriff;
+}
+
+
 img {
     height: 105px;
     width: 105px;
 }
 
-.container-lg {
-    padding: 0;
-}
 
-.header {
+.header, .featured, .select {
     display: flex;
     justify-content: center;
+    font-family: 'Abel", sans-serif';
 }
 
 .navbar {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-bottom: 2em;
 }
 
 .navbar li {
-    padding: 2em;
+    padding: 0 5px;
+
 }
 
 .header2 {
-    height: 64px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    font-weight: bold;
+    justify-content: center;
+
+}
+
+.text1 {
+    font-size: 32px;
+    margin-left: 1.5em;
+}
+
+.text2 {
+    font-size: 32px;
+    margin-left: 1em;
 }
 
 .location {
     display: flex;
     justify-content: center;
-    padding: 3em
+    padding: 1em;
+    margin: auto;
+    font-size: 28px;
 }
+
+h1, h3 {
+    font-weight: bold;
+}
+
+.circle {
+    display: flex;
+    background: lightblue;
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+    border: white solid .5em;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.red {
+    background: #E6563B;
+    color: white;
+}
+
+.orange {
+    background: #EB9D3A;
+    color: white;
+}
+
+.green {
+    background: #7CB06C;
+    color: white;
+}
+
+.blue {
+    background: #00ABA9;
+    color: white;
+}
+
+.dots {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 2em;
+}
+.icons {
+    display: flex;
+    flex-direction: row;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.ipad {
+    border: 1em solid #E6E6E6;
+}
+
+.footer {
+    justify-content: center;
+
+    padding: 0 1.5em;
+}
+
+.select {
+    padding: 4em 0 1em 0;
+    justify-content: center;
+}
+
+.row {
+    margin: 0;
+}
+
+.ipad {
+    width: 300px;
+    height: 175px;
+    display: flex;
+    margin: auto;
+    border: 2px solid grey;
+}
+
+.icons {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 3px;
+}
+
+.linebreak {
+    visibility: hidden;
+    position: absolute;
+}
+
+.container-lg {
+    justify-content: center;
+}
+
+
+@media screen and (min-width: 576px) {
+
+
+    .dots {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header2, .text1, .text2 {
+        display: flex;
+        flex-direction: row;
+        font-size: 28px;
+    }
+
+    .text2 {
+        margin-left: 5px;
+    }
+
+    .row.select {
+        padding-top: 0;
+    }
+
+    .linebreak {
+        visibility: visible;
+        position: relative;
+    }
+
+    .bracket .bracket2 {
+    }
+
+    .footer{
+        padding: 0;
+    }
+    .jumbotron {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 4em;
+        margin: 2em 0 1em 0;
+        padding: 2em 0;
+        font-family: 'Anton', sans-seriff;
+        font-weight: lighter;
+    }
+    .header {
+        padding-bottom: 2em;
+    }
+    .pictures {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .select {
+        justify-content: flex-start;
+    }
+
+    .card-text {
+        padding: 0;
+    }
+
+    .tiny {
+        padding: 0;
+    }
+
+    .fa-twitter {
+        padding: 5px;
+        color: #48a1ec;
+    }
+
+    .picone, .pictwo, .picthree {
+        padding: 0;
+        margin: 0;
+    }
+
+    .adminbar, .nibbler, .howto {
+        padding: 1em 0;
+    }
+
+    .tweet {
+        padding: 2em 0;
+    }
+}
+<<<<<<< HEAD
+@media screen and (min-width: 992px) {
+    body {
+        margin: 4em;
+    }
+}
+=======
+>>>>>>> d1b2b757e9f91b5e83b8bf770ea045532f052ca5
