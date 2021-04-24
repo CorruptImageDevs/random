@@ -1,0 +1,46 @@
+body {
+    margin:2em;
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+}
+.pics {
+    background-color: rgba(0, 0, 0, .4);
+
+}
+
+.leaderboard {
+    background-color: rgba(0, 0, 0, .4);
+}
+.errthang {
+    display: flex;
+    justify-content: space-between;
+}
+.card-text, .card-title {
+    color: white;
+}
+
+.vids {
+    background-color: rgba(0, 0, 0, .4);
+    padding: 1em;
+}
+
+.errthang2 {
+    padding: 2em;
+    justify-content: space-between;
+}
+
+.card-header {
+    color: white;
+}
+.card {
+    background-color: rgba(0, 0, 0, .4);
+}
+.btn {
+    display: flex;
+    justify-content: flex-end;
+}

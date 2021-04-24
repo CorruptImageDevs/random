@@ -1,0 +1,31 @@
+body {
+    background-color: orangered;
+    margin: 0;
+
+}
+.jumbotron {
+    background-image: url("../img/mexican-header.jpeg");
+    background-size: contain;
+    height: 9em;
+    margin: 3em 0;
+    padding: 0;
+    justify-content: center;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+.display-4 {
+    font-family: Cochin;
+}
+.container {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+.btn {
+    color: white;
+}
