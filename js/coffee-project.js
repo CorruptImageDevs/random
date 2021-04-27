@@ -1,9 +1,10 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<ul id="myUL" class="coffee d-flex">';
+    var html = '<ul id="myUL" class="coffee">';
+    html += '<div class=eachCoffee>'
     // html += '<div>' + coffee.id + '</div>';
-    html += '<li class="col-2"> <a href="#">' + coffee.name + '</a></li>';
+    html += '<li><a href="#">' + coffee.name + '</a></li>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
