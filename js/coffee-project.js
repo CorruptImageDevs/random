@@ -38,12 +38,13 @@ function updateCoffees(e) {
 
 function myFunction() {
     // Declare variables
-    var input, filter, ul, li, a, i, p, txtValue;
+    var input, filter, ul, li, a, i, p, eachCoffee, txtValue;
     input = document.getElementById('myInput');
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
     li = ul.getElementsByTagName('li');
     p = document.getElementsByTagName('p');
+    eachCoffee = document.getElementsByClassName('eachCoffee');
 
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
@@ -52,9 +53,11 @@ function myFunction() {
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
             p[i].style.display = "";
+            eachCoffee[i].style.display = "";
         } else {
             li[i].style.display = "none";
             p[i].style.display = "none";
+            eachCoffee[i].style.display = "none";
         }
     }
 }
@@ -82,6 +85,8 @@ var tbody = document.querySelector('#coffees');
 var submitChange = document.querySelector('.submit');
 var roastSelection = document.querySelector('#roast-selection');
 
+
 tbody.innerHTML = renderCoffees(coffees);
 
 submitChange.addEventListener('change', updateCoffees);
+
