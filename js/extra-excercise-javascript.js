@@ -156,7 +156,11 @@ function getEmployeeCount() {
 console.log(getEmployeeCount())
 
 function getTotalNumberOfSales() {
-    for
+    salesReport.employees.forEach(function (report) {
+        report.salesUnits.forEach(function (sales) {
+            console.log(sales);
+        });
+    });
 }
 console.log(getTotalNumberOfSales())
 
