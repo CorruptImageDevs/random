@@ -63,92 +63,84 @@ var salesReport = {
             salesUnits: 3
         },
         {
-            employeeNumber: '2',
+            employeeNumber: '3',
             name: {
                 first: 'Tricia',
                 last: 'Triciason'
             },
             salesUnits: 5
-        },
-        {
-            employeeNumber: '3',
-            name: {
-                first: 'Jane',
-                last: 'Janeway'
-            },
-            salesUnits: 3
         },
         {
             employeeNumber: '4',
             name: {
-                first: 'Tricia',
-                last: 'Triciason'
+                first: 'Jeannette',
+                last: 'Jeanson'
             },
-            salesUnits: 5
+            salesUnits: 4
         },
         {
             employeeNumber: '5',
             name: {
-                first: 'Jane',
-                last: 'Janeway'
+                first: 'Charles Emmerson III',
+                last: 'Winchester'
             },
-            salesUnits: 3
+            salesUnits: 2
         },
         {
             employeeNumber: '6',
             name: {
-                first: 'Tricia',
-                last: 'Triciason'
+                first: 'Chet',
+                last: 'Chedderson'
             },
-            salesUnits: 5
+            salesUnits: 8
         },
         {
             employeeNumber: '7',
             name: {
-                first: 'Jane',
-                last: 'Janeway'
+                first: 'Chaiam',
+                last: 'Chaiamson'
             },
-            salesUnits: 3
+            salesUnits: 12
         },
         {
             employeeNumber: '8',
             name: {
-                first: 'Tricia',
-                last: 'Triciason'
+                first: 'Dale',
+                last: 'Dalesinger'
             },
-            salesUnits: 5
+            salesUnits: 1
         },
         {
             employeeNumber: '9',
             name: {
-                first: 'Tricia',
-                last: 'Triciason'
+                first: 'Zig',
+                last: 'Ziglar'
             },
-            salesUnits: 5
+            salesUnits: 50
         },
         {
             employeeNumber: '10',
             name: {
-                first: 'Jane',
-                last: 'Janeway'
+                first: 'Henry',
+                last: 'Kissinger'
             },
-            salesUnits: 3
+            salesUnits: 1
         },
         {
             employeeNumber: '11',
             name: {
-                first: 'Tricia',
-                last: 'Triciason'
+                first: 'Arthur Herbert',
+                last: 'Fonzarelli'
             },
-            salesUnits: 5
+            salesUnits: 23
         },
         {
             employeeNumber: '12',
             name: {
-                first: 'Tricia',
-                last: 'Triciason'
+                first: 'Betty',
+                last: 'Boop'
             },
-            salesUnits: 5
+            salesUnits: 57
         },
     ],
 }
@@ -157,6 +149,16 @@ var salesReport = {
 // getEmployeeCount() should return the total number of employees
 // getTotalNumberOfSales() should return the total number of units sold
 // getAverageSalesPerEmployee() should return the average units sold per employee
+
+function getEmployeeCount() {
+    return Object.keys(salesReport.employees).length;
+}
+console.log(getEmployeeCount())
+
+function getTotalNumberOfSales() {
+    for
+}
+console.log(getTotalNumberOfSales())
 
 
 // Exercise 4. Go to https://gist.githubusercontent.com/ryanorsinger/f77e5ec94dbe14e21771/raw/d4a1f916723ca69ac99fdcab48746c6682bf4530/profiles.json
