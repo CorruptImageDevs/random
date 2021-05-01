@@ -1047,7 +1047,7 @@ var profiles = [
 
     var profileReport = {
         numberOfProfiles: getProfileCount(),
-        activeProfiles: getActiveCount(),
+        activeProfiles: getActiveCount(profiles),
 
     }
 
@@ -1068,15 +1068,15 @@ console.log(profileReport);
 //  getActiveCount() should return the number of active profiles
 
 
-    function getActiveCount() {
-        var bucket = [];
+    function getActiveCount(obj) {
+        var bucket = 0;
 
-        profiles.forEach(function(count){
-            if (profiles.isActive === true) {
-                bucket.push(profiles.isActive)
+        for (var p in obj) {
+            if (obj.isActive(p) && obj[p] === true) {
+                bucket++
             }
-        })
-        return (bucket).length;
+        }
+        return bucket;
     }
 
 
