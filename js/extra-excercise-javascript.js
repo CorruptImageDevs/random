@@ -1047,7 +1047,9 @@ var profiles = [
 
     var profileReport = {
         numberOfProfiles: getProfileCount(),
-        activeProfiles: getActiveCount(profiles),
+        activeProfiles: getActiveCount(),
+        inactiveCount: getInactiveCount(),
+        sumOfAllBalances: sumOfAllBalances()
 
     }
 
@@ -1062,27 +1064,60 @@ console.log(profileReport);
                 bucket.push(profiles._id);
             })
             return (bucket).length;
+
     }
 
 
 //  getActiveCount() should return the number of active profiles
 
 
-    function getActiveCount(obj) {
-        var bucket = 0;
+// function getActiveCount(array) {
+//     var count = 0;
+//     for (var i = 0; i < array.length; i++) {
+//         if (array[i].isActive) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
 
-        for (var p in obj) {
-            if (obj.isActive(p) && obj[p] === true) {
-                bucket++
-            }
+function getActiveCount() {
+    var count = 0;
+    for (var i = 0; i < profiles.length; i++) {
+        if (profiles[i].isActive) {
+            count++;
         }
-        return bucket;
     }
+    return count;
+}
+
 
 
 
 //  getInactiveCount() should return the number of inactive profiles
+
+function getInactiveCount() {
+    var count = 0;
+    for (var i = 0; i < profiles.length; i++) {
+        if (profiles[i].isActive === false) {
+            count++;
+        }
+    }
+    return count;
+}
+
+
 //  sumOfAllBalances() should return sum of the balance of all profiles
+
+function sumOfAllBalances() {
+    var bucket = 0;
+    profiles.forEach(function (element) {
+        bucket += parseFloat(element.balance.replace("$","").replace(/,/g,""));
+    });
+    return bucket;
+}
+
+
 //  getAverageBalance() should return the average balance per users
 //  getLowestBalance() should return the customer name with the lowest balance
 //  getHighestBalance() should return the customer name with the highest balance
