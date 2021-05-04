@@ -2,71 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>jQuery Intro</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>jQuery Introduction</title>
+    <style>
+        /*h1 {color: }*/
+    </style>
 </head>
 <body>
-<h1>NFL Players</h1>
-<div>
-    <h3 class="QBs">Quarter Backs</h3>
-    <ul>
-
-        <li>Tom Brady</li>
-        <li>Patrick Mahomes</li>
-        <li>Lamar Jackson</li>
-        <li>Aaron Rodgers</li>
+<h1>Amazing Page</h1>
+<div id="wrapItUp">
+    <p id="introToTheList">This is going to be an amazing list</p>
+    <!--    <p id="introToTheList">What is going to happen</p>-->
+    <ul id="theList">
+        <li class="doggysFaveFoods">Raw steak</li>
+        <li class="doggysFaveFoods">Hot dogs</li>
+        <li class="doggysFaveFoods">Fried liver</li>
+        <li class="doggysFaveFoods">Cheese</li>
+        <li>Kibble</li>
     </ul>
 </div>
-
-<div>
-    <h3 class="WRs">Wide Receivers</h3>
-    <ul>
-        <li>DeAndre Hopkins</li>
-        <li>Julio Jones</li>
-        <li>Devante Adams</li>
-        <li>Tyreek Hill</li>
-    </ul>
-</div>
-
-<div>
-    <h3 class="RBs">Running Backs</h3>
-    <ul>
-        <li>Alvin Kamara</li>
-        <li>Christian McCaffrey</li>
-        <li>Saquon Barkley</li>
-        <li>Najee Harris</li>
-    </ul>
-</div>
-
-
-<div id="tomimg">Hello</div>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-<script>
-
-
-
-
-    $("li").css("font-size", "20px");
-
-    $("h1, li").css("background-color", "yellow");
-
-    var theContent = $("h1").html();
-    alert(theContent);
-
-    $(".QBs, .RBs, .WRs").click(function(){
-        $(this).next().slideToggle(500);
-    });
-
-    $$(".tomimg").click(function(){
-        $(this).next().slideToggle(500);
-    });
-
-
-
-</script>
-
+<p id="doggysFaveFoods">Not going to get the red border</p>
 <script src="js/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        // alert("your page has finished loading");
+        // to get the text only
+        // var theDiv = $("#wrapItUp").text();
+        // // to get everything between the tags
+        // //   var theDiv = $("#wrapItUp").html();
+        // // alert(theDiv);
+        // var theListIntro = $("#introToTheList").html();
+        // alert(theListIntro);
+        //    $(".doggysFaveFoods").css("border", "solid red 1px");
+        //   $("li").css("font-size", "20px");
+        //   $("h1, p, li").css("background-color", "palegoldenrod");
+        //   var theHeadersContent = $("h1").html();
+        //   //alert(theHeadersContent);
+        //   var theListItems = $("li").each(function(){
+        //       alert($(this).html());
+        //       // doesn't work:
+        //       // alert($("li").html());
+        //   });
+
+        // alert(theListItems);
+
+        $('h1').click(function() {
+            $(this).css('background-color', 'red');
+        })
+
+        $('p').dblclick(function() {
+            $('p').css('font-size', '18px');
+        })
+
+        $('.doggysFaveFoods').hover(function(){
+            $(this).css('color', 'red');
+        }, function() {
+            $(this).css('color', 'black');
+        })
+
+    });
+</script>
 </body>
 </html>
