@@ -1,6 +1,5 @@
 body {
-    background-image: url(https://images.pexels.com/photos/1235706/pexels-photo-1235706.jpeg?cs=srgb&dl=pexels-lood-goosen-1235706.jpg&fm=jpg);
-    background-size: cover;
+    background-color: #333333;
     color: white;
 }
 
@@ -68,11 +67,6 @@ ul>li {
     z-index: 1;
 }
 
-.display-4 {
-    margin: 0 1.5em;
-    font-weight: bold;
-    font-size: 60px;
-}
 
 p {
     margin:0;
@@ -103,7 +97,8 @@ button {
 }
 
 .name {
-    margin: 0 20em 0 0;
+    background-color: pink;
+    margin: 0;
 }
 
 .searchBar {

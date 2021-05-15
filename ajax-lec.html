@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax lec</title>
+</head>
+<body>
+<main id="library">
+
+
+</main>
+
+
+<script src="js/ajax-lec.js"></script>
+<script>
+    $.ajax("data/book.json").done(function (books) {
+        console.log(books);
+        for (var i = 0; j < books.length; j++ {
+            $("#library").append("<div id='book-" + (j + 1) + "' ><h3>" + books[j].title + "</h3><p></p></div>")
+        })
+    })
+</script>
+</body>
+</html>
