@@ -114,3 +114,48 @@ if (!Array.prototype.map) {
         return A;
     };
 }
+const array1 = [1, 2, 3, 4];
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+// 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer));
+// expected output: 10
+
+// 5 + 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer, 5));
+// expected output: 15
+
+
+
+
+// Arrow function
+reduce((accumulator, currentValue) => { ... } )
+reduce((accumulator, currentValue, index) => { ... } )
+reduce((accumulator, currentValue, index, array) => { ... } )
+reduce((accumulator, currentValue, index, array) => { ... }, initialValue)
+
+// Callback function
+reduce(callbackFn)
+reduce(callbackFn, initialValue)
+
+// Inline callback function
+reduce(function callbackFn(accumulator, currentValue) { ... })
+reduce(function callbackFn(accumulator, currentValue, index) { ... })
+reduce(function callbackFn(accumulator, currentValue, index, array){ ... })
+reduce(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
+
+
+const getMax = (a, b) => Math.max(a, b);
+
+// callback is invoked for each element in the array starting at index 0
+[1, 100].reduce(getMax, 50); // 100
+[    50].reduce(getMax, 10); // 50
+
+// callback is invoked once for element at index 1
+[1, 100].reduce(getMax);     // 100
+
+// callback is not invoked
+[    50].reduce(getMax);     // 50
+[      ].reduce(getMax, 1);  // 1
+
+[      ].reduce(getMax);     // TypeErrorg
