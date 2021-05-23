@@ -147,3 +147,13 @@ const paragraphs = document.querySelectorAll("p");
 // paragraphs[1] is the second <p> element, etc.
 alert(paragraphs[0].nodeName);
 
+
+    document.getElementById("demo").innerHTML =
+    "The title of this document is: " + document.title;
+
+
+function getElements() {
+    var x = document.getElementsByName("x");
+    document.getElementById("demo").innerHTML = x.length;
+}
+<
