@@ -160,3 +160,8 @@ function getElements() {
 
 document.getElementById("demoTwo").innerHTML =
     "The href of the first link is " + document.links[0].href;
+
+
+function bgChange(bg) {
+    document.body.style.background = bg;
+}
