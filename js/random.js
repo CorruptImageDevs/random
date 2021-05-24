@@ -156,4 +156,7 @@ function getElements() {
     var x = document.getElementsByName("x");
     document.getElementById("demo").innerHTML = x.length;
 }
-<
+
+
+document.getElementById("demoTwo").innerHTML =
+    "The href of the first link is " + document.links[0].href;
